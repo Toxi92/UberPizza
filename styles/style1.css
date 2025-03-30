@@ -1,0 +1,143 @@
+html{
+    background:
+    url("../Images/Fond.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: wheat;
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lexend-VariableFont_wght';
+}
+
+.banderole_bas{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: brown;
+}
+
+
+.ligne_banderole_bas{
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.Titre{
+    display: flex;
+    justify-content: center;
+}
+
+.DivLogin {
+    display: flex;
+    justify-content: flex-end; /* Aligne le bouton à droite */
+    padding: 10px; /* Ajoute un peu d'espace autour */
+}
+
+.BouttonLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Ajuste automatiquement la largeur */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    color: lightgray;
+    background-color: brown; /* Couleur de fond derrière le bouton */
+    padding: 5px 10px; /* Ajoute de l'espace interne au bouton */
+    border-radius: 5px; /* Ajoute des coins arrondis */
+    text-decoration: none; /* Supprime le soulignement du lien */
+}
+
+.DivAcceuil {
+    display: flex;
+    justify-content: flex-start; /* Aligne le bouton à droite */
+    padding: 10px; /* Ajoute un peu d'espace autour */
+}
+
+.BouttonAcceuil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Ajuste automatiquement la largeur */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    color: lightgray;
+    background-color: brown; /* Couleur de fond derrière le bouton */
+    padding: 5px 10px; /* Ajoute de l'espace interne au bouton */
+    border-radius: 5px; /* Ajoute des coins arrondis */
+    text-decoration: none; /* Supprime le soulignement du lien */
+}
+
+.DivConnexion {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 40vh; /* Prend 80% de la hauteur de la fenêtre */
+}
+
+.DivConnexion form {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    background-color: #f5f5f5; /* Couleur de fond du formulaire */
+    padding: 20px; /* Ajoute de l'espace interne */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
+    width: 400px; /* Largeur fixe */
+}
+
+.DivConnexion label {
+    margin-bottom: 5px; /* Espacement entre le label et l'input */
+    font-weight: bold; /* Met le texte en gras */
+    color: #333; /* Couleur du texte */
+}
+
+.DivConnexion input[type="email"],
+.DivConnexion input[type="password"] {
+    padding: 10px; /* Ajoute de l'espace interne */
+    margin-bottom: 15px; /* Espacement entre les champs */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 14px; /* Taille de police */
+}
+
+.DivConnexion input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50; /* Couleur verte */
+    color: white; /* Texte blanc */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur au survol */
+    font-size: 16px; /* Taille de police */
+    transition: background-color 0.3s ease; /* Animation au survol */
+}
+
+.DivConnexion input[type="submit"]:hover {
+    background-color: #45a049; /* Couleur légèrement plus foncée au survol */
+}
+
+.DivConnexion p {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50; /* Couleur verte */
+    color: white; /* Texte blanc */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur au survol */
+    font-size: 16px; /* Taille de police */
+    transition: background-color 0.3s ease;
+
+}
+
+.DivConnexion p:hover {
+    background-color: #45a049; /* Couleur légèrement plus foncée au survol */
+}
+
+.DivConnexion a {
+    text-decoration: none;
+}
