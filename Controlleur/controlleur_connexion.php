@@ -6,6 +6,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
     
     if ($query->getUserByEmail($email)!=false && password_verify($password, $query->getUserByEmail($email)['Password'])) {
+        session_start();
         $_SESSION['id'] = $query->getUserByEmail($email)['ID'];
         header('Location: ../Vue/index.php');
         exit;

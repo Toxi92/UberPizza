@@ -1,39 +1,17 @@
-<?php if(session_status() == PHP_SESSION_NONE) {
-    session_start();
-}  ?>
-
 <!DOCTYPE html>
 
 <html lang="fr">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../styles/style1.css">
 
-    <title>Acceuil</title>
+<title>Profile</title>
 
 </head>
-
-<header>
-    <h1 class="Titre">Bienvenue</h1>
-    <?php
-
-    if (isset($_SESSION['id'])) { ?>
-        <div class="DivLogin">
-                <a class="BouttonLogin" href="./Profil.php"><p>Mon Profil</p></a>
-        </div>
-    <?php } else { ?>
-        <div class="DivLogin">
-            <a class="BouttonLogin" href="./Connexion.php"><p>Se connecter / S'inscrire</p></a>
-        </div> <?php
-    }
-    ?>
-
-</header>
 
 <body>
     
