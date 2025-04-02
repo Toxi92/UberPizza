@@ -2,14 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include_once("../Modele/User.php");
-session_start();
-
-if (!isset($_SESSION['user'])) {
-    header('Location: ./index.php');
-    exit;
-}
-$user = unserialize($_SESSION['user']);
+include_once("../Controlleur/controlleur_monprofil.php");
 ?>
 
 <!DOCTYPE html>
