@@ -16,24 +16,75 @@ include_once("../Controlleur/controlleur_monprofil.php");
 
     <link rel="stylesheet" href="../styles/style1.css">
 
+    <script src="../Script/sauvegardeProfile.js"></script>
+
 <title>Profile</title>
 
 </head>
 
 <body>
-    <div>
-        <h1 class="Titre">Mon Profil</h1>
+    <h1 class="Titre">Mon Profil</h1>
+    
+    <div>    
         <h2 class="TitreSection">Informations Personnelles</h2>
+
+        <div>    
         <div class="DivProfil">
-            <p>Nom : <?php echo $user->getNom(); ?></p>
-            <p>Prénom : <?php echo $user->getPrenom(); ?></p>
-            <p>Téléphone : <?php echo $user->getTel(); ?></p>
-            <p>Adresse : <?php echo $user->getAdresse(); ?></p>
-            <p>Ville : <?php echo $user->getVille(); ?></p>
-            <p>Code Postal : <?php echo $user->getCp(); ?></p>
-            <p>Email : <?php echo $user->getEmail(); ?></p>
-            <p>IP : <?php echo $user->getIp(); ?></p>
-            <p>Moyen de Paiement : <?php echo $user->getMoyenPaiement(); ?></p>
+            <div>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" value="<?php echo $user->getNom(); ?>" readonly>
+                <button>Modifier</button>
+            </div>
+
+            <div>
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" value="<?php echo $user->getPrenom(); ?>" readonly>
+                <button>Modifier</button>
+            </div>
+
+            <div>
+                <label for="tel">Téléphone:</label>
+                <input type="text" id="tel" value="<?php echo $user->getTel(); ?>" readonly>
+                <button>Modifier</button>
+            </div>
+
+            <div>
+                <label for="adresse">Adresse:</label>
+                <input type="text" id="adresse" value="<?php echo $user->getAdresse(); ?>" readonly>
+                <button>Modifier</button>
+            </div>
+
+            <div>
+                <label for="ville">Ville:</label>
+                <input type="text" id="ville" value="<?php echo $user->getVille(); ?>" readonly>
+                <button>Modifier</button>
+            </div>
+
+            <div>
+                <label for="cp">Code Postal:</label>
+                <input type="text" id="cp" value="<?php echo $user->getCp(); ?>" readonly>
+                <button>Modifier</button>
+            </div>
+
+            <div>
+                <label for="email">Email :</label>
+                <input type="text" id="email" value="<?php echo $user->getEmail(); ?>" readonly>
+                <button>Modifier</button>
+            </div>
+
+
+            <div>
+                <label for="moyenPaiement">Moyen de Paiement :</label>
+                <input type="text" id="moyenPaiement" value="<?php echo $user->getMoyenPaiement(); ?>" readonly>
+                <button>Modifier</button>
+            </div>
+
+            <div>
+                <label for="ip">IP :</label>
+                <input type="text" id="ip" value="<?php echo $user->getIp(); ?>" readonly>
+            </div>
+
+        </div>
     </div>
     
 </body>
