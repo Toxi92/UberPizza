@@ -22,7 +22,7 @@
     <h1 class="Titre">Bienvenue</h1>
     <?php
 
-    if (isset($_SESSION['id'])) { ?>
+    if (isset($_SESSION['user'])) { ?>
         <div class="DivLogin">
                 <a class="BouttonLogin" href="./Profil.php"><p>Mon Profil</p></a>
         </div>

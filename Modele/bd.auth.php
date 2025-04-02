@@ -69,3 +69,4 @@ class QueryUser{
 
 $bdd = new Database('localhost','emolard_projet','emolard','kbbULD53-!');
 $query = new QueryUser($bdd);
+$user = new Utilisateur();

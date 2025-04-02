@@ -1,3 +1,17 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include_once("../Modele/User.php");
+session_start();
+
+if (!isset($_SESSION['user'])) {
+    header('Location: ./index.php');
+    exit;
+}
+$user = unserialize($_SESSION['user']);
+?>
+
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -14,6 +28,20 @@
 </head>
 
 <body>
+    <div>
+        <h1 class="Titre">Mon Profil</h1>
+        <h2 class="TitreSection">Informations Personnelles</h2>
+        <div class="DivProfil">
+            <p>Nom : <?php echo $user->getNom(); ?></p>
+            <p>Prénom : <?php echo $user->getPrenom(); ?></p>
+            <p>Téléphone : <?php echo $user->getTel(); ?></p>
+            <p>Adresse : <?php echo $user->getAdresse(); ?></p>
+            <p>Ville : <?php echo $user->getVille(); ?></p>
+            <p>Code Postal : <?php echo $user->getCp(); ?></p>
+            <p>Email : <?php echo $user->getEmail(); ?></p>
+            <p>IP : <?php echo $user->getIp(); ?></p>
+            <p>Moyen de Paiement : <?php echo $user->getMoyenPaiement(); ?></p>
+    </div>
     
 </body>
 

@@ -7,7 +7,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if ($query->getUserByEmail($email)!=false && password_verify($password, $query->getUserByEmail($email)['Password'])) {
         session_start();
-        $_SESSION['id'] = $query->getUserByEmail($email)['ID'];
+        $res=$query->getUserByEmail($email);
+        $user->login($res['ID'], $res['Nom'], $res['Prénom'], $res['Tel'], $res['Username'], $res['Password'], $res['Adresse'], $res['Ville'], $res['CP'], $res['Moyen_Paiement'],$res['email'] ,$res['Admin']);
+        $_SESSION['user'] = serialize($user);
         header('Location: ../Vue/index.php');
         exit;
     } elseif ($query->getUserByEmail($email)==false) {
