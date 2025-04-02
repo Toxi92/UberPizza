@@ -25,7 +25,7 @@ error_reporting(E_ALL);
 <header>
 
 <div class="DivAcceuil">
-        <a class="BouttonAcceuil" href="./index.php"><p>Accueuil</p></a>
+        <a class="BouttonAcceuil" href="./index.php"><p>Accueil</p></a>
     </div>
 
 </header>

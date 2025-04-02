@@ -12,6 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    if ($query->isMailUsed($email)) {
+        echo "<script>alert('L\'adresse e-mail est déjà utilisée.');</script>";
+        exit;
+    }
     $query->inscription($nom,$prenom,$tel,$username,$password,$adresse,$ville,$cp,$moyenPaiement,$email);
     header('Location: ../Vue/Connexion.php');
     echo alert("Inscription réussie ! Vous pouvez maintenant vous connecter.");

@@ -1,3 +1,9 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -16,7 +22,7 @@
 <header>
 
 <div class="DivAcceuil">
-        <a class="BouttonAcceuil" href="./index.php"><p>Accueuil</p></a>
+        <a class="BouttonAcceuil" href="./index.php"><p>Accueil</p></a>
     </div>
 
 </header>
@@ -31,6 +37,7 @@
             <input type="submit" value="Se connecter">
             <a class="BouttonInscription" href="./Inscription.php"><p>S'inscrire</p></a>
         </form>
+        <?php require_once("../Controlleur/controlleur_connexion.php"); ?>
     </div>
 
         

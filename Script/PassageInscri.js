@@ -17,9 +17,6 @@ document.getElementById('formulaire_inscription').addEventListener('submit', fun
         sessionStorage.setItem('password', password);
         // Rediriger vers Inscription2.php
         window.location.href = 'Inscription2.php';
-        console.log('Nom d\'utilisateur :', username);
-        console.log('Email :', email);
-        console.log('Mot de passe :', password);
     }
 
 });

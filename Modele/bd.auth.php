@@ -27,7 +27,7 @@ class QueryUser{
     }
 
     public function getUserById($id){
-        $req = $this->bdd->getConnexion()->prepare("SELECT * FROM utilisateur WHERE id = :id");
+        $req = $this->bdd->getConnexion()->prepare("SELECT * FROM Utilisateurs WHERE id = :id");
         $req->execute(array(
             'id' => $id
         ));
@@ -36,13 +36,31 @@ class QueryUser{
     }
 
     public function getUserByEmail($email){
-        $req = $this->bdd->getConnexion()->prepare("SELECT * FROM Utilisateur WHERE email = :email");
+        $req = $this->bdd->getConnexion()->prepare("SELECT * FROM Utilisateurs WHERE email = :email");
         $req->execute(array(
             'email' => $email
         ));
         $result = $req->fetch();
-        return $result;
+        if(empty($result)){
+            return false;
+        }else{
+            return $result;
+        }
     }
+
+    public function isMailUsed($email){
+        $req = $this->bdd->getConnexion()->prepare("SELECT * FROM Utilisateurs WHERE email = :email");
+        $req->execute(array(
+            'email' => $email
+        ));
+        $result = $req->fetch();
+        if(empty($result)){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
 
     public function login(){
 

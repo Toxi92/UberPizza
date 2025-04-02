@@ -1,3 +1,7 @@
+<?php if(session_status() == PHP_SESSION_NONE) {
+    session_start();
+}  ?>
+
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -16,9 +20,18 @@
 
 <header>
     <h1 class="Titre">Bienvenue</h1>
-    <div class="DivLogin">
-        <a class="BouttonLogin" href="./Connexion.php"><p>Se connecter / S'inscrire</p></a>
-    </div>
+    <?php
+    if (isset($_SESSION['id'])) { ?>
+        <div class="DivProfil">
+                <a class="BouttonAcceuil" href="./index.php"><p>Accueil</p></a>
+        </div>
+    <?php } else { ?>
+        <div class="DivLogin">
+            <a class="BouttonLogin" href="./Connexion.php"><p>Se connecter / S'inscrire</p></a>
+        </div> <?php
+    }
+    ?>
+
 </header>
 
 <body>
