@@ -17,13 +17,18 @@ include_once("../Controlleur/controlleur_monprofil.php");
     <link rel="stylesheet" href="../styles/style1.css">
 
     <script src="../Script/sauvegardeProfile.js"></script>
+    <script src="../Script/VueAdmin.js"></script>
 
 <title>Profile</title>
 
 </head>
 
 <body>
+    <button id="toggleButton" class="toggle-button">+</button>
     <h1 class="Titre">Mon Profil</h1>
+    
+    <a class="BouttonAcceuilProfil" href="./index.php"><p>Accueil</p></a>
+
     
     <div>    
         <h2 class="TitreSection">Informations Personnelles</h2>

@@ -234,3 +234,61 @@ html{
     background-color: #bd2130; /* Rouge encore plus foncé lors du clic */
     transform: scale(0.95); /* Légère réduction lors du clic */
 }
+
+.BouttonAcceuilProfil {
+    display: inline-block;
+    background-color: brown; /* Bleu */
+    color: #fff; /* Texte blanc */
+    text-align: center;
+    padding: 5px 15px; /* Réduit la taille du bouton */
+    font-size: 14px; /* Réduit la taille du texte */
+    font-weight: bold;
+    border-radius: 4px; /* Coins légèrement arrondis */
+    text-decoration: none;
+    margin: 5px auto; /* Réduit l'espacement vertical */
+    position: relative;
+    top: -10px; /* Remonte légèrement le bouton */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.BouttonAcceuilProfil:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+    transform: scale(1.05); /* Légère mise en avant au survol */
+}
+
+.BouttonAcceuilProfil:active {
+    background-color: #004085; /* Bleu encore plus foncé lors du clic */
+    transform: scale(0.95); /* Légère réduction lors du clic */
+}
+
+.TitreSection {
+    font-size: 20px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 10px; /* Réduit l'espacement en dessous du titre */
+    text-align: center; /* Centre le texte */
+}
+
+.toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007BFF; /* Bleu */
+    color: #fff; /* Texte blanc */
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%; /* Bouton rond */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-button:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+    transform: scale(1.1); /* Légère mise en avant au survol */
+}
+
+.toggle-button:active {
+    background-color: #004085; /* Bleu encore plus foncé lors du clic */
+    transform: scale(0.95); /* Légère réduction lors du clic */
+}

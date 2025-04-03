@@ -60,10 +60,17 @@ class QueryUser{
             return true;
         }
     }
-
-
-    public function login(){
-
+    public function setAdmin($id){
+        $req = $this->bdd->getConnexion()->prepare("UPDATE Utilisateurs SET Admin = 1 WHERE id = :id");
+        $req->execute(array(
+            'id' => $id
+        ));
+    }
+    public function setUser($id){
+        $req = $this->bdd->getConnexion()->prepare("UPDATE Utilisateurs SET Admin = 0 WHERE id = :id");
+        $req->execute(array(
+            'id' => $id
+        ));
     }
 }
 

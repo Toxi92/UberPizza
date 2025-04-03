@@ -99,4 +99,35 @@ class Utilisateur {
         return $this->email;
     }
 
+    public function setAdmin(bool $admin) {
+        $this->admin = $admin;
+    }
+    public function setNom(string $nom) {
+        $this->nom = $nom;
+    }
+    public function setPrenom(string $prenom) {
+        $this->prenom = $prenom;
+    }
+    public function setTel(string $tel) {
+        $this->tel = $tel;
+    }
+    public function setUsername(string $username) {
+        $this->username = $username;
+    }
+    public function setPassword(string $password) {
+        $this->password = $password;
+    }
+    public function setAdresse(string $adresse) {
+        $this->adresse = $adresse;
+    }
+    public function setVille(string $ville) {
+        $this->ville = $ville;
+    }
+    public function setCp(string $cp) {
+        $this->cp = $cp;
+    }
+    public function setMoyenPaiment(string $moyenPaiement) {
+        $this->moyenPaiement = $moyenPaiement;
+    }
+
 }
