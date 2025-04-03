@@ -84,6 +84,9 @@ include_once("../Controlleur/controlleur_monprofil.php");
                 <input type="text" id="ip" value="<?php echo $user->getIp(); ?>" readonly>
             </div>
 
+            <div>
+                <input type="submit" id="deconnexion" value="Déconnexion">
+                <script src="../Script/deconnexion.js"></script>
         </div>
     </div>
     
