@@ -73,7 +73,7 @@ class QueryUser{
         ));
     }
     public function updateUserField($userId, $field, $value) {
-        $allowedFields = ['Nom', 'Prénom', 'Tel', 'Adresse', 'Ville', 'CP', 'Email', 'Moyen_Paiement'];
+        $allowedFields = ['Nom', 'Prénom', 'Tel', 'Adresse', 'Ville', 'CP', 'email', 'Moyen_Paiement'];
         if (in_array($field, $allowedFields)) {
             $sql = "UPDATE Utilisateurs SET $field = :value WHERE ID = :id";
             $stmt = $this->bdd->getConnexion()->prepare($sql);

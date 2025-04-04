@@ -128,8 +128,11 @@ class Utilisateur {
     public function setCp(string $cp) {
         $this->cp = $cp;
     }
-    public function setMoyenPaiment(string $moyenPaiement) {
+    public function setMoyenPaiement(string $moyenPaiement) {
         $this->moyenPaiement = $moyenPaiement;
+    }
+    public function setEmail(string $email) {
+        $this->email = $email;
     }
 
 }

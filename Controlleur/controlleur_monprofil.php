@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             case 'Ville':
                 $user->setVille($value);
                 break;
-            case 'cCP':
+            case 'CP':
                 $user->setCp($value);
                 break;
             case 'email':
