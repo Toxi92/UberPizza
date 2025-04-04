@@ -1,5 +1,9 @@
-<?php if(session_status() == PHP_SESSION_NONE) {
+<?php
+include_once("../Modele/User.php");
+//include_once("../Controlleur/controlleur_index.php");
+if(session_status() == PHP_SESSION_NONE) {
     session_start();
+
 }  ?>
 
 <!DOCTYPE html>
@@ -31,7 +35,18 @@
             <a class="BouttonLogin" href="./Connexion.php"><p>Se connecter / S'inscrire</p></a>
         </div> <?php
     }
-    ?>
+
+    if (isset($_SESSION['user'])) { 
+        $user = unserialize($_SESSION['user']); // Désérialiser l'objet utilisateur
+        if ($user->isAdmin()==true) { ?>
+            <div class="DivAdmin">
+                <a class="BouttonAdmin" href="./AjoutPizzeria.php"><p>Ajouter Pizzeria</p></a>
+            </div>
+    <?php
+    }
+}
+
+?>
 
 </header>
 

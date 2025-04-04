@@ -92,7 +92,7 @@ class Utilisateur {
     }
 
     public function isAdmin(){
-        return $this->admin;
+        return (bool) $this->admin;
     }
 
     public function getEmail() {
@@ -102,6 +102,8 @@ class Utilisateur {
     public function setAdmin(bool $admin) {
         $this->admin = $admin;
     }
+
+
     public function setNom(string $nom) {
         $this->nom = $nom;
     }

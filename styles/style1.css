@@ -292,3 +292,98 @@ html{
     background-color: #004085; /* Bleu encore plus foncé lors du clic */
     transform: scale(0.95); /* Légère réduction lors du clic */
 }
+
+.BouttonAdmin {
+    display: inline-block;
+    background-color: #28a745; /* Vert */
+    color: #fff; /* Texte blanc */
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none;
+    margin: 10px auto; /* Espacement vertical */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.BouttonAdmin:hover {
+    background-color: #218838; /* Vert plus foncé au survol */
+    transform: scale(1.05); /* Légère mise en avant au survol */
+}
+
+.BouttonAdmin:active {
+    background-color: #1e7e34; /* Vert encore plus foncé lors du clic */
+    transform: scale(0.95); /* Légère réduction lors du clic */
+}
+
+/* Conteneur principal pour le formulaire d'ajout de pizzeria */
+.AjoutPizzeriaContainer {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Titre du formulaire */
+.AjoutPizzeriaTitre {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Groupes de champs du formulaire */
+.AjoutPizzeriaFormGroup {
+    margin-bottom: 15px;
+}
+
+.AjoutPizzeriaFormGroup label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.AjoutPizzeriaFormGroup input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.AjoutPizzeriaFormGroup input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Bouton de soumission */
+.AjoutPizzeriaSubmitButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.AjoutPizzeriaSubmitButton:hover {
+    background-color: #218838;
+    transform: scale(1.02);
+}
+
+.AjoutPizzeriaSubmitButton:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+}

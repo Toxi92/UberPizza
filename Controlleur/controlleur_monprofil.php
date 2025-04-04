@@ -11,6 +11,7 @@ if (!isset($_SESSION['user'])) {
 $user = unserialize($_SESSION['user']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $input = json_decode(file_get_contents("php://input"), true);
     if ($input['state'] === "plus") {
         $user->setAdmin(true); // Activer le mode admin
         $query->setAdmin($user->getId());
