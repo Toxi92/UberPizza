@@ -36,38 +36,38 @@ include_once("../Controlleur/controlleur_monprofil.php");
         <div>    
         <div class="DivProfil">
             <div>
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" value="<?php echo $user->getNom(); ?>" readonly>
+                <label for="Nom">Nom :</label>
+                <input type="text" id="Nom" value="<?php echo $user->getNom(); ?>" readonly>
                 <button>Modifier</button>
             </div>
 
             <div>
-                <label for="prenom">Prénom:</label>
-                <input type="text" id="prenom" value="<?php echo $user->getPrenom(); ?>" readonly>
+                <label for="Prénom">Prénom:</label>
+                <input type="text" id="Prénom" value="<?php echo $user->getPrenom(); ?>" readonly>
                 <button>Modifier</button>
             </div>
 
             <div>
-                <label for="tel">Téléphone:</label>
-                <input type="text" id="tel" value="<?php echo $user->getTel(); ?>" readonly>
+                <label for="Tel">Téléphone:</label>
+                <input type="text" id="Tel" value="<?php echo $user->getTel(); ?>" readonly>
                 <button>Modifier</button>
             </div>
 
             <div>
-                <label for="adresse">Adresse:</label>
-                <input type="text" id="adresse" value="<?php echo $user->getAdresse(); ?>" readonly>
+                <label for="Adresse">Adresse:</label>
+                <input type="text" id="Adresse" value="<?php echo $user->getAdresse(); ?>" readonly>
                 <button>Modifier</button>
             </div>
 
             <div>
-                <label for="ville">Ville:</label>
-                <input type="text" id="ville" value="<?php echo $user->getVille(); ?>" readonly>
+                <label for="Ville">Ville:</label>
+                <input type="text" id="Ville" value="<?php echo $user->getVille(); ?>" readonly>
                 <button>Modifier</button>
             </div>
 
             <div>
-                <label for="cp">Code Postal:</label>
-                <input type="text" id="cp" value="<?php echo $user->getCp(); ?>" readonly>
+                <label for="CP">Code Postal:</label>
+                <input type="text" id="CP" value="<?php echo $user->getCp(); ?>" readonly>
                 <button>Modifier</button>
             </div>
 
@@ -79,8 +79,8 @@ include_once("../Controlleur/controlleur_monprofil.php");
 
 
             <div>
-                <label for="moyenPaiement">Moyen de Paiement :</label>
-                <input type="text" id="moyenPaiement" value="<?php echo $user->getMoyenPaiement(); ?>" readonly>
+                <label for="Moyen_Paiement">Moyen de Paiement :</label>
+                <input type="text" id="Moyen_Paiement" value="<?php echo $user->getMoyenPaiement(); ?>" readonly>
                 <button>Modifier</button>
             </div>
 
