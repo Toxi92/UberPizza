@@ -11,4 +11,6 @@ class Pizza {
         $this->prixUnitaire = $prixUnitaire;
         $this->cheminPhoto = $cheminPhoto;
     }
+    
 }
+

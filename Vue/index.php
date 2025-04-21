@@ -41,6 +41,7 @@ if(session_status() == PHP_SESSION_NONE) {
         if ($user->isAdmin()==true) { ?>
             <div class="DivAdmin">
                 <a class="BouttonAdmin" href="./AjoutPizzeria.php"><p>Ajouter Pizzeria</p></a>
+                <a class="BouttonAdmin" href="./AjoutPizza.php"><p>Ajouter Pizza</p></a>
             </div>
     <?php
     }
