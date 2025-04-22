@@ -388,3 +388,113 @@ html{
     transform: scale(0.98);
 }
 
+/* Conteneur principal */
+.PizzaContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+/* Titre */
+.PizzaTitre {
+    text-align: center;
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Liste des pizzas */
+.PizzaListe {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Élément de la liste */
+.PizzaItem {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.PizzaItem:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    border-color: #007BFF;
+}
+
+/* Image de la pizza */
+.PizzaImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    background-color: #fff;
+}
+
+/* Détails de la pizza */
+.PizzaDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.PizzaNom {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.PizzaPrix {
+    font-size: 1.4rem;
+    color: #555;
+    margin: 10px 0 0;
+    font-style: italic;
+}
+
+/* Bouton de suppression */
+.PizzaDeleteButton {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.PizzaDeleteButton:hover {
+    background-color: #e60000;
+}
+
+#pizzeria-pizzas {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    color: #333;
+}
+
+#pizzeria-pizzas:focus {
+    border-color: #007BFF;
+    outline: none;
+    background-color: #fff;
+}

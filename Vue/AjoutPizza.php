@@ -23,6 +23,9 @@ include_once("../Controlleur/controlleur_ajout_pizza.php");
 </head>
 
 <body>
+
+<a class="BouttonAcceuilProfil" href="./index.php"><p>Accueil</p></a>
+
 <div class="AjoutPizzeriaContainer">
         <h1 class="AjoutPizzeriaTitre">Ajouter une Pizza</h1>
         <form action="../Controlleur/controlleur_ajout_pizza.php" method="POST" class="AjoutPizzeriaForm">
@@ -38,6 +41,36 @@ include_once("../Controlleur/controlleur_ajout_pizza.php");
             <script src="../Script/AjoutPizza.js"></script>
         </form>
     </div>
+
+    <div class="PizzaContainer">
+    <h1 class="PizzaTitre">Liste des Pizzas</h1>
+    <div class="PizzaListe">
+        <?php foreach ($pizzas as $pizza): ?>
+            <div class="PizzaItem">
+                <img src="<?= htmlspecialchars($pizza['Chemin_Photo']) ?>" alt="Image de <?= htmlspecialchars($pizza['Nom_Pizza']) ?>" class="PizzaImage">
+                <div class="PizzaDetails">
+                    <h2 class="PizzaNom"><?= htmlspecialchars($pizza['Nom_Pizza']) ?></h2>
+                    <p class="PizzaPrix"><?= htmlspecialchars($pizza['Prix_Unitaire']) ?> €</p>
+                </div>
+                <!-- Formulaire pour supprimer une pizza -->
+                <form action="../Controlleur/controlleur_supprimer_pizza.php" method="POST" class="PizzaDeleteForm">
+                    <input type="hidden" name="id" value="<?= htmlspecialchars($pizza['ID_Pizza']) ?>">
+                    <button type="submit" class="PizzaDeleteButton">Supprimer</button>
+                </form>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
 </body>
+
+<footer>
+    <div class="banderole_bas">
+                <a class="ligne_banderole_bas" href="./mentions_legale.html"><p>Mentions Légales</p></a>
+                <a class="ligne_banderole_bas" href="./get_partenaires_by_bdd.php"><p>Sites partenaires</p></a>
+                <a class="ligne_banderole_bas" href="https://www.youtube.com/watch?v=G3e-cpL7ofc&pp=ygUGI3dlcHVp"><p>Arrêter d'être nul en HTML/CSS ( à regarder )</p></a>
+                <a class="ligne_banderole_bas" href="/rien.html"><p>Plus trop d'idées</p></a>
+            </div>
+</footer>
 
 </html>

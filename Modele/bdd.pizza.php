@@ -23,6 +23,11 @@ class QueryPizza{
         $result = $req->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
+    
+    public function supprimerPizza($id) {
+        $req = $this->bdd->getConnexion()->prepare("DELETE FROM Pizzas WHERE ID_Pizza = :id");
+        $req->execute(['id' => $id]);
+    }
 }
 
 include_once("bd.auth.php");

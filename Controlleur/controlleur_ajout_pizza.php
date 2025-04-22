@@ -18,6 +18,8 @@ if(session_status() == PHP_SESSION_NONE) {
 
 }
 
+$pizzas = $QueryPizza->getAllPizzas();
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
