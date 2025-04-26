@@ -31,6 +31,6 @@ class QueryPizza{
 }
 
 include_once("bd.auth.php");
-$bdd = new Database('localhost','emolard_projet','emolard','kbbULD53-!');
-//$bdd = new Database('mysql-molard.alwaysdata.net','molard_projet_pizza','molard','kbbULD53-!');
+//$bdd = new Database('localhost','emolard_projet','emolard','kbbULD53-!');
+$bdd = new Database('mysql-molard.alwaysdata.net','molard_projet_pizza','molard','kbbULD53-!');
 $QueryPizza = new QueryPizza($bdd);

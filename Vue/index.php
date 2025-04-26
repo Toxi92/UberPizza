@@ -1,6 +1,6 @@
 <?php
 include_once("../Modele/User.php");
-//include_once("../Controlleur/controlleur_index.php");
+include_once("../Controlleur/controlleur_index.php");
 if(session_status() == PHP_SESSION_NONE) {
     session_start();
 
@@ -43,6 +43,7 @@ if(session_status() == PHP_SESSION_NONE) {
                 <a class="BouttonAdmin" href="./AjoutPizzeria.php"><p>Ajouter Pizzeria</p></a>
                 <a class="BouttonAdmin" href="./AjoutPizza.php"><p>Ajouter Pizza</p></a>
             </div>
+            
     <?php
     }
 }
@@ -52,7 +53,30 @@ if(session_status() == PHP_SESSION_NONE) {
 </header>
 
 <body>
-    
+
+<div class="PizzeriaContainer">
+    <h1 class="PizzeriaTitre">Pizzerias par lesquelles vous pouvez être livrés</h1>
+        <div class="PizzeriaListe">
+    <?php foreach ($pizzerias as $pizzeria): ?>
+        <div class="PizzeriaItem">
+            <img src="<?= htmlspecialchars($pizzeria['CheminPhoto']) ?>" alt="Image de <?= htmlspecialchars($pizzeria['Nom_Pizzeria']) ?>" class="PizzeriaImage">
+            <div class="PizzeriaDetails">
+                <h2 class="PizzeriaNom"><?= htmlspecialchars($pizzeria['Nom_Pizzeria']) ?></h2>
+            </div>
+            <?php if (isset($_SESSION['user'])){
+                    if ($user->isAdmin()==True){ ?>
+                        <!-- Formulaire pour supprimer une pizzeria -->
+                    <form action="../Controlleur/controlleur_supprimer_pizzeria.php" method="POST" class="PizzeriaDeleteForm">
+                        <input type="hidden" name="id" value="<?= htmlspecialchars($pizzeria['ID_Pizzeria']) ?>">
+                        <button type="submit" class="PizzeriaDeleteButton">❌</button>
+                    </form>
+            <?php }; ?>
+            <?php }; ?>
+        </div>
+    <?php endforeach; ?>
+</div>
+</div>
+
 </body>
 
 <footer>

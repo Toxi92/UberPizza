@@ -1,8 +1,11 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include_once("../Modele/bdd.pizza.php");
 include_once("../Modele/User.php");
-include_once("../Modele/bdd.pizza.php");
 if(session_status() == PHP_SESSION_NONE) {
     session_start();
     if (!isset($_SESSION['user'])) {
@@ -29,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($nom && $prix) {
         
         $QueryPizza->ajoutPizza($nom,$prix);
-
-        echo "Pizza ajoutée avec succès : $nom à $prix €";
+        header("Location: ../Vue/AjoutPizza.php");
+        exit();
     } else {
         http_response_code(400);
         echo "Erreur : données invalides.";

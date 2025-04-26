@@ -87,7 +87,7 @@ class QueryUser{
 
 }
 
-$bdd = new Database('localhost','emolard_projet','emolard','kbbULD53-!');
-//$bdd = new Database('mysql-molard.alwaysdata.net','molard_projet_pizza','molard','kbbULD53-!');
+//$bdd = new Database('localhost','emolard_projet','emolard','kbbULD53-!');
+$bdd = new Database('mysql-molard.alwaysdata.net','molard_projet_pizza','molard','kbbULD53-!');
 $query = new QueryUser($bdd);
 $user = new Utilisateur();

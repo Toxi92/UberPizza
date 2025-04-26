@@ -1,5 +1,11 @@
 <?php
-include_once("../Modele/bdd.pizza.php");
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+include_once("../Modele/bdd.pizzeria.php");
+
 include_once("../Modele/User.php");
 if(session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -13,7 +19,7 @@ if(session_status() == PHP_SESSION_NONE) {
             exit();
         }
     }
-
+    include_once("../Modele/bdd.pizza.php");
     $pizzas = $QueryPizza->getAllPizzas();
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -21,11 +27,10 @@ if(session_status() == PHP_SESSION_NONE) {
         $adresse = $_POST['adresse'] ?? null;
         $ville = $_POST['ville'] ?? null;
         $cp = $_POST['cp'] ?? null;
-        $pizzas = $_POST['pizzas'] ?? []; // Récupérer les IDs des pizzas sélectionnées
     
-        if ($nom && $adresse && $ville && $cp && !empty($pizzas)) {
-            // Ajoutez ici la logique pour insérer la pizzeria dans la base de données
-            // Exemple : $QueryPizzeria->ajouterPizzeria($nom, $adresse, $ville, $cp, $pizzas);
+        if ($nom && $adresse && $ville && $cp) {
+            $QueryPizzeria->ajoutPizzeria($nom, $adresse, $ville, $cp);
+            echo "Pizzeria ajoutée avec succès : $nom, $adresse, $ville, $cp";
             header("Location: ../Vue/index.php"); // Redirige vers la page d'accueil après l'ajout
             exit();
         } else {
