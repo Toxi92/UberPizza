@@ -22,6 +22,13 @@ include_once("../Controlleur/controlleur_ajout_pizzeria.php");
 
 </head>
 
+<header>
+    <h1 class="Titre">Ajouter une Pizzeria</h1>
+    <div class="DivAcceuil">
+        <a class="BouttonAcceuil" href="./index.php"><p>Accueil</p></a>
+    </div>
+</header>
+
 <body>
 <div class="AjoutPizzeriaContainer">
     <h1 class="AjoutPizzeriaTitre">Ajouter une Pizzeria</h1>
@@ -57,5 +64,14 @@ include_once("../Controlleur/controlleur_ajout_pizzeria.php");
     </form>
 </div>
 </body>
+
+<footer>
+    <div class="banderole_bas">
+                <a class="ligne_banderole_bas" href="./mentions_legale.html"><p>Mentions Légales</p></a>
+                <a class="ligne_banderole_bas" href="./get_partenaires_by_bdd.php"><p>Sites partenaires</p></a>
+                <a class="ligne_banderole_bas" href="https://www.youtube.com/watch?v=G3e-cpL7ofc&pp=ygUGI3dlcHVp"><p>Arrêter d'être nul en HTML/CSS ( à regarder )</p></a>
+                <a class="ligne_banderole_bas" href="/rien.html"><p>Plus trop d'idées</p></a>
+            </div>
+</footer>
 
 </html>

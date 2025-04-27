@@ -59,7 +59,9 @@ if(session_status() == PHP_SESSION_NONE) {
         <div class="PizzeriaListe">
     <?php foreach ($pizzerias as $pizzeria): ?>
         <div class="PizzeriaItem">
-            <img src="<?= htmlspecialchars($pizzeria['CheminPhoto']) ?>" alt="Image de <?= htmlspecialchars($pizzeria['Nom_Pizzeria']) ?>" class="PizzeriaImage">
+        <a href="./PizzeriaDetails.php?id=<?= htmlspecialchars($pizzeria['ID_Pizzeria']) ?>">
+                    <img src="<?= htmlspecialchars($pizzeria['CheminPhoto']) ?>" alt="Image de <?= htmlspecialchars($pizzeria['Nom_Pizzeria']) ?>" class="PizzeriaImage">
+                </a>
             <div class="PizzeriaDetails">
                 <h2 class="PizzeriaNom"><?= htmlspecialchars($pizzeria['Nom_Pizzeria']) ?></h2>
             </div>

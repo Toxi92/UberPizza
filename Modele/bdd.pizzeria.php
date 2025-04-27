@@ -30,6 +30,12 @@ class QueryPizzeria{
         $req = $this->bdd->getConnexion()->prepare("DELETE FROM Pizzerias WHERE ID_Pizzeria = :id");
         $req->execute(['id' => $id]);
     }
+    
+    public function getPizzeriaById($id) {
+        $req = $this->bdd->getConnexion()->prepare("SELECT * FROM Pizzerias WHERE ID_Pizzeria = :id");
+        $req->execute(['id' => $id]);
+        return $req->fetch(PDO::FETCH_ASSOC);
+    }
 }
 
 include_once("bd.auth.php");
