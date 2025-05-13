@@ -39,6 +39,6 @@ class QueryPizzeria{
 }
 
 include_once("bd.auth.php");
-//$bdd = new Database('localhost','emolard_projet','emolard','kbbULD53-!');
+
 $bdd = new Database();
 $QueryPizzeria = new QueryPizzeria($bdd);
