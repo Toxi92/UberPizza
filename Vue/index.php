@@ -59,17 +59,17 @@ if(session_status() == PHP_SESSION_NONE) {
         <div class="PizzeriaListe">
     <?php foreach ($pizzerias as $pizzeria): ?>
         <div class="PizzeriaItem">
-        <a href="./PizzeriaDetails.php?id=<?= htmlspecialchars($pizzeria['ID_Pizzeria']) ?>">
-                    <img src="<?= htmlspecialchars($pizzeria['CheminPhoto']) ?>" alt="Image de <?= htmlspecialchars($pizzeria['Nom_Pizzeria']) ?>" class="PizzeriaImage">
+        <a href="./PizzeriaDetails.php?id=<?= htmlspecialchars(string: $pizzeria->getIdPizzeria()) ?>">
+                    <img src="<?= htmlspecialchars($pizzeria->getCheminPhoto()) ?>" alt="Image de <?= htmlspecialchars($pizzeria->getNomPizzeria()) ?>" class="PizzeriaImage">
                 </a>
             <div class="PizzeriaDetails">
-                <h2 class="PizzeriaNom"><?= htmlspecialchars($pizzeria['Nom_Pizzeria']) ?></h2>
+                <h2 class="PizzeriaNom"><?= htmlspecialchars($pizzeria->getNomPizzeria()) ?></h2>
             </div>
             <?php if (isset($_SESSION['user'])){
                     if ($user->isAdmin()==True){ ?>
                         <!-- Formulaire pour supprimer une pizzeria -->
                     <form action="../Controlleur/controlleur_supprimer_pizzeria.php" method="POST" class="PizzeriaDeleteForm">
-                        <input type="hidden" name="id" value="<?= htmlspecialchars($pizzeria['ID_Pizzeria']) ?>">
+                        <input type="hidden" name="id" value="<?= htmlspecialchars($pizzeria->getIdPizzeria()) ?>">
                         <button type="submit" class="PizzeriaDeleteButton">❌</button>
                     </form>
             <?php }; ?>

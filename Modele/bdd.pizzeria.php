@@ -1,6 +1,6 @@
 <?php
 
-
+include_once "Pizzeria.php";
 
 class QueryPizzeria{
     private $bdd;
@@ -23,7 +23,11 @@ class QueryPizzeria{
         $req = $this->bdd->getConnexion()->prepare("SELECT * FROM Pizzerias");
         $req->execute();
         $result = $req->fetchAll(PDO::FETCH_ASSOC);
-        return $result;
+        $pizzerias = [];
+        foreach ($result as $pizzeria) {
+            $pizzerias[] = new Pizzeria($pizzeria['ID_Pizzeria'], $pizzeria['Nom_Pizzeria'], $pizzeria['Adresse'], $pizzeria['Ville'], $pizzeria['CP'], $pizzeria['CheminPhoto']);        
+        }
+        return $pizzerias;
     }
     
     public function supprimerPizzeria($id) {
